@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Wardrobe 💕</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>💖 My Digital Wardrobe</h1>
+    
+    <div class="nav-buttons">
+        <a href="{{ url_for('upload_page') }}">
+            <button>Upload Outfit 💕</button>
+        </a>
+        <a href="{{ url_for('outfit_page') }}">
+            <button>View Outfit 💕</button>
+        </a>
+    </div>
+
+    <div class="filter-buttons">
+        <button onclick="filterItems('all')" class="active">All</button>
+        <button onclick="filterItems('tops')">Tops</button>
+        <button onclick="filterItems('bottoms')">Bottoms</button>
+        <button onclick="filterItems('dress')">Dress</button>
+        <button onclick="filterItems('shorts')">Shorts</button>
+    </div>
+
+    <h2>👗 Wardrobe</h2>
+    <div class="grid" id="wardrobe"></div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

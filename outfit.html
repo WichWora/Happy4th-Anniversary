@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Outfit Preview 💖</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>💖 Outfit Preview</h1>
+
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+        <a href="index.html">
+            <button>⬅ Back to Wardrobe</button>
+        </a>
+        <button onclick="resetOutfit()">Clear Outfit</button>
+    </div>
+    <!-- Outfit Status Indicator -->
+    <div class="outfit-status">
+        <div class="completion-text">Outfit Complete: <span id="completionPercent">0%</span></div>
+        <div class="completion-bar">
+            <div class="completion-fill" id="completionFill" style="width: 0%"></div>
+        </div>
+    </div>
+    <!-- Clean Outfit Layout -->
+    <div class="outfit-visual" id="outfitContainer">
+        <!-- Top -->
+        <div class="outfit-slot" id="topSlot">
+            <div class="slot-label">👕 Top</div>
+            <div class="slot-content">
+                <p class="empty-message">+ Add Top</p>
+            </div>
+        </div>
+
+        <!-- Bottom -->
+        <div class="outfit-slot" id="bottomSlot">
+            <div class="slot-label">👗 Bottom</div>
+            <div class="slot-content">
+                <p class="empty-message">+ Add Bottom</p>
+            </div>
+        </div>
+
+        <!-- Dress (full outfit) -->
+        <div class="outfit-slot full-width" id="dressSlot">
+            <div class="slot-label">👗 Dress</div>
+            <div class="slot-content">
+                <p class="empty-message">+ Add Dress</p>
+            </div>
+        </div>
+
+        <!-- Shorts -->
+        <div class="outfit-slot" id="shortsSlot">
+            <div class="slot-label">🩳 Shorts</div>
+            <div class="slot-content">
+                <p class="empty-message">+ Add Shorts</p>
+            </div>
+        </div>
+
+        <!-- Shoes (optional - you can add this category later) -->
+        <!--
+        <div class="outfit-slot" id="shoesSlot">
+            <div class="slot-label">👟 Shoes</div>
+            <div class="slot-content">
+                <p class="empty-message">+ Add Shoes</p>
+            </div>
+        </div>
+        -->
+    </div>
+
+    <!-- Current Items Grid -->
+    <h2 style="margin-top: 40px;">🛒 Selected Items</h2>
+    <div class="grid" id="cart"></div>
+
+    <!-- In all three HTML files (index.html, upload.html, outfit.html) -->
+    <script src="database.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

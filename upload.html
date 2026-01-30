@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Outfit💖</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>💖 Upload Outfit 💖</h1>
+
+    <!-- Upload Section -->
+    <div class="upload-section">
+        <h2>Add New Clothes</h2>
+        <input type="file" id="imageInput" accept="image/*">
+
+        <select id="categoryInput">
+            <option value="tops">Top</option>
+            <option value="bottoms">Bottom</option>
+            <option value="dress">Dress</option>
+            <option value="shorts">Shorts</option>
+        </select>
+
+        <button onclick="addClothes()">Add to Wardrobe</button>
+    </div>
+
+    <!-- Back Button -->
+    <a href="index.html" class="back-button">⬅ Back to Wardrobe</a>
+
+    <!-- In all three HTML files (index.html, upload.html, outfit.html) -->
+    <script src="database.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
